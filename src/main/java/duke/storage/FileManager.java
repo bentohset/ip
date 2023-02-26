@@ -19,13 +19,6 @@ public class FileManager {
     private String filePath;
     private String dataDirectory;
 
-    /**
-     * Constructor for the File Manager object.
-     * <p>
-     * Creates a File object according to the relative path /data/duke.txt to store the data
-     * <p>
-     * Initializes a /data/ folder and duke.txt if it does not exist
-     */
     public FileManager() {
         this.dataDirectory = "./data/";
         this.filePath = this.dataDirectory + "duke.txt";
@@ -43,11 +36,6 @@ public class FileManager {
         }
     }
 
-    /**
-     * Saves the current taskList accumulated over the program's life and stores it in /data/duke.txt
-     *
-     * @param taskList the taskList containing all the user's tasks
-     */
     public void save(TaskList taskList) {
         try {
             FileWriter writer = new FileWriter(this.filePath);
@@ -60,14 +48,6 @@ public class FileManager {
         }
     }
 
-    /**
-     * Retrieves any tasks saved in /data/duke.txt if the directory exists.
-     * <p>
-     * Decodes the contents of duke.txt into a taskList object. 
-     * Called upon initialisation of Duke.java
-     *
-     * @return taskList the taskList containing all the user's tasks saved in storage
-     */
     public List<Task> retrieve() {
         Scanner scanner = null;
         List<Task> taskList = new ArrayList<>();
@@ -86,12 +66,6 @@ public class FileManager {
         return taskList;
     }
 
-    /**
-     * Decoder method to read each line of duke.txt storage and converts into a Task object
-     *
-     * @param task the string corresponding to the lines of duke.txt
-     * @return decoded Task object
-     */
     private Task decodeTask(String task) {
         String[] components = task.split(" ### ");
         String command = components[0];

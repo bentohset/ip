@@ -25,11 +25,6 @@ public class Ui {
         printDivider();
     }
 
-    /**
-     * Prints the message passed as an array onto the terminal line by line
-     *
-     * @input messages string array
-     */
     public static void printMessage(String[] messages) {
         printDivider();
         for (String message : messages) {

@@ -12,16 +12,6 @@ import duke.exceptions.InvalidDateTimeException;
 import java.time.LocalDateTime;
 
 public class TaskParser {
-    /**
-     * Parses a task command as a string array and returns the respective task object
-     *
-     * @param inputArray the input array to be parsed, consisting of all the command arguments
-     * @return the Task object according to the string array
-     * @throws InvalidCommandException the input string does not match any valid command
-     * @throws InvalidTaskException the input string does not match any valid task
-     * @throws InvalidFormatException the input string is not in the correct format
-     * @throws InvalidDateTimeException the date and time of the input string is in the wrong format
-     */
     public static Task getTaskFromCommand(String[] inputArray) throws InvalidFormatException, InvalidCommandException, InvalidDateTimeException, InvalidTaskException {
         Task task;
         String command = inputArray[0];

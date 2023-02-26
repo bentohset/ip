@@ -33,15 +33,7 @@ public class CommandParser {
     public CommandParser(TaskList tasks) {
         this.taskList = tasks;
     }
-    
-    /**
-     * Validates an index if it is within boundaries of the task list and returns the index
-     *
-     * @param inputArr the input array being parsed
-     * @return a valid index
-     * @throws InvalidCommandException the input string does not match any valid command
-     * @throws InvalidTaskException the input string does not match any valid task
-     */
+
     private int getValidIndex(String[] inputArr, String command) throws InvalidTaskException, InvalidCommandException {
         if (inputArr.length == 1) {
             throw new InvalidTaskException(command);
@@ -57,16 +49,7 @@ public class CommandParser {
         return index;
     }
 
-    /**
-     * Parses and returns a `Command` object from a given input string
-     *
-     * @param inputArray the input array to be parsed, consisting of all the command arguments
-     * @throws InvalidCommandException the input string does not match any valid command
-     * @throws InvalidTaskException the input string does not match any valid task
-     * @throws InvalidFormatException the input string is not in the correct format
-     * @throws InvalidDateTimeException the date and time of the input string is in the wrong format
-     * @throws NoTasksException no tasks resulting from the filter is found
-     */
+
     public Command parseCommand(String[] inputArray) throws InvalidCommandException, InvalidTaskException, InvalidFormatException, InvalidDateTimeException, NoTasksException {
         String command = inputArray[0];
         
@@ -105,15 +88,6 @@ public class CommandParser {
         }
     }
 
-    /**
-     * Gets lines of input strings from the Scanner and passes it to the handler in an array
-     *
-     * @throws InvalidCommandException the input string does not match any valid command
-     * @throws InvalidTaskException the input string does not match any valid task
-     * @throws InvalidFormatException the input string is not in the correct format
-     * @throws InvalidDateTimeException the date and time of the input string is in the wrong format
-     * @throws NoTasksException no tasks resulting from the filter is found
-     */
     public void getInput() throws InvalidCommandException, InvalidTaskException, InvalidFormatException, InvalidDateTimeException , NoTasksException {
         Scanner input = new Scanner(System.in);
         boolean isRunning = true;
