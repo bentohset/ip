@@ -18,6 +18,7 @@ public class TaskList {
 
     /**
      * Constructor for the creation of a TaskList object.
+     * 
      * @param tasks List of tasks to be included in TaskList after creation.
      */
     public TaskList(List<Task> tasks) {
@@ -26,7 +27,7 @@ public class TaskList {
 
     /**
      * Returns the number of tasks in the task list
-     *
+     * 
      * @return the number of tasks in the task list
      */
     public int size() {
@@ -35,6 +36,7 @@ public class TaskList {
     
     /**
      * Gets the list of tasks.
+     * 
      * @return List of tasks inline separated by commas
      */
     public List<Task> getTasks() {
@@ -53,6 +55,7 @@ public class TaskList {
 
     /**
      * Adds a given task to the TaskList object.
+     * 
      * @param task The task to be added.
      */
     public void addTask(Task task) {
@@ -67,6 +70,7 @@ public class TaskList {
 
     /**
      * Deletes the task identified by its order in the TaskList.
+     * 
      * @param taskNum The number corresponding to the task to be deleted.
      */
     public void deleteTask(int deleteIndex) {
@@ -82,6 +86,7 @@ public class TaskList {
 
     /**
      * Gets the number of tasks in the list as a message.
+     * 
      * @return sizeMessage The message indicating how many tasks are in the list.
      */
     public String printSize() {
@@ -92,6 +97,7 @@ public class TaskList {
 
     /**
      * Marks the task, identified by its order, as completed.
+     * 
      * @param taskNum The number corresponding to the task to be marked as completed.
      */
     public void markTask(int taskNum) {
@@ -106,6 +112,7 @@ public class TaskList {
 
     /**
      * Unmarks the task, identified by its order, as incomplete.
+     * 
      * @param taskNum The number corresponding to the task to be unmarked.
      */
     public void unmarkTask(int taskNum) {
@@ -136,6 +143,7 @@ public class TaskList {
 
     /**
      * Displays all tasks filtered by a keyword
+     * 
      * @param filter the keyword to filter the tasks by
      */
     public void printFilteredTasks(String filter) throws NoTasksException {
